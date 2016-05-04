@@ -17,6 +17,13 @@ public class FrontController {
 		  ModelAndView model=new ModelAndView("index");
 		  return model;
 	  }
+	 @RequestMapping("/index")
+	  public ModelAndView indexPage()
+	  {
+		  
+		  ModelAndView model=new ModelAndView("index");
+		  return model;
+	  }
 	@RequestMapping("/Login")
 	  public ModelAndView HomeWorld()
 	  {
@@ -32,6 +39,12 @@ public class FrontController {
 				  ModelAndView model=new ModelAndView("Register");
 				  return model;
 			  }
-			
+	  @RequestMapping("/Products")
+	  public ModelAndView ProductPage()
+	  {
+		  
+		  ModelAndView model=new ModelAndView("Products");
+		  return model;
+	  }
 	
 }

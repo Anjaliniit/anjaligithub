@@ -5,10 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 <style>
 body {
 background: #eee !important; 
@@ -59,34 +60,30 @@ input[type="password"] {
  border-top-right-radius: 0;
 }
 }
+
+
+
+
 </style>
 </head>
 <body>
 <div class="container">
 
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="http://localhost:8080/musichub/index.jsp">MusicHub</a>
+      <a class="navbar-brand" href="#">MusicHub</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index">Home</a></li>
-       <li class="dropdown">
-              <a href="Products" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="Products">Flute</a></li>
-                <li><a href="Products">Guiter</a></li>
-                <li><a href="Products">Piano</a></li>
-                </ul>
-          </li>
-      <li><a href="AboutUs">About Us</a></li>
-      <li><a href="ContactUs">Contact Us</a></li>
-      
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Page 3</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="Register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a href="Register.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="Login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
 </nav>
@@ -102,19 +99,20 @@ input[type="password"] {
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
     </form>
   </div>
- <nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <nav class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container-fluid">
-   
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index">Home</a></li>
-      <li><a href="AboutUs">About Us</a></li>
-      <li><a href="ContactUs">Contact Us</a></li>     
-    </ul>
     
-  </div>
-</nav>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="AboutUs.jsp">About Us</a></li>
+      <li><a href="ContactUs.jsp">Contact Us</a></li>
+      <li><a href="More.jsp">Page 3</a></li>
+    </ul>
+    </div>
+    </nav>
+
 
   
   </div>
 </body>
-</html>
+</html>​
