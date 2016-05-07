@@ -13,21 +13,51 @@ import org.springframework.stereotype.Repository;
 
 import com.musichub.model.Product;
 
-@Repository("data")
+@Repository
 public class ProductDAOImpl implements ProductDAO
 {   
- List<Product> dao=null;
- @Autowired
- SessionFactory sessionFactory; 
- Transaction tx=null;
-
-   public ProductDAOImpl()
-	{
-	dao=new ArrayList();	 
+	private SessionFactory sessionFactory;
+    
+    public void setSessionFactory(SessionFactory sf){
+        this.sessionFactory = sf;
     }
 
-public Session getSession(){
-	return sessionFactory.openSession();
+public Product selectProduct(int productId) {
+	 Session session=this.sessionFactory.getCurrentSession();
+	 Product p=(Product)session.load(Product.class,new Integer(productId));
+	 return p;
+}
+
+public void insertProduct(Product p) {
+	 Session session=this.sessionFactory.getCurrentSession();
+	 session.save(p);
+   }
+
+public void deleteProduct(int productId) {
+	 Session session=this.sessionFactory.getCurrentSession();
+	 Product p=(Product)session.load(Product.class,new Integer(productId));
+	 if(p!=null)
+		 session.delete(p);
+	
+}
+
+public void updateProduct(Product p) {
+	 Session session=this.sessionFactory.getCurrentSession();
+     session.update(p);
+     
+	
+}
+
+public List<Product> getAllProduct() {
+	 Session session=this.sessionFactory.getCurrentSession();
+	Query query=session.createQuery("From Product");
+	List<Product> productsList=(List<Product>)query.list();
+	return productsList;
+}
+   
+   
+/*
+
 }
 public List<Product> getAllProduct() {
 	 Session session=getSession();
@@ -56,5 +86,7 @@ public List<Product> getAllProduct() {
 	       	tx.commit();
 	        session.close();
 		 return id;
-	   }
+	   }*/
+
+
 }

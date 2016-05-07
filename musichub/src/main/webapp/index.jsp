@@ -172,7 +172,7 @@ margin-bottom:20px;
 			<nav class="navbar navbar-inverse navbar-fixed-bottom">
 				<div class="container">
               		<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="index">join</a></li>
+						<li class="active"><a href="admin/add">Admin</a></li>
 						<li><a href="AboutUs">About Us</a></li>
 						<li><a href="ContactUs">Contact Us</a></li>
 					</ul>
@@ -181,11 +181,7 @@ margin-bottom:20px;
 		</div>
 		
 </div>
-
-
-
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="${bjs}bootstrap.min.js"></script>
 
 

@@ -2,13 +2,14 @@ package com.musichub.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
 public class Product
 {
 @Id
-@GeneratedValue
+@GeneratedValue(strategy=GenerationType.AUTO)
 private int id;
 private String name,brand,description,category;
 double price;
@@ -62,6 +63,13 @@ public void setCategory(String category) {
 	this.category = category;
 }
 
+public String toString()
+{
+	return "Id"+id+", name="+name+", brand="+",description="+description+",category="+category+",Price="+price;
+	
+	
+	
+}
 
 
 
