@@ -1,24 +1,29 @@
 package com.musichub.model;
 
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
 public class Product
 {
-	
+@Id
+@GeneratedValue
 private int id;
 private String name,brand,description,category;
+double price;
 public Product(){}
-
-public Product(int id,String name,String brand,String description,String category)
-{
-this.id=id;
-this.name=name;
-this.brand=brand;
-this.description=description;
-this.category=category;
-}
 
 public int getId() {
 	return id;
+}
+
+public double getPrice() {
+	return price;
+}
+
+public void setPrice(double price) {
+	this.price = price;
 }
 
 public void setId(int id) {

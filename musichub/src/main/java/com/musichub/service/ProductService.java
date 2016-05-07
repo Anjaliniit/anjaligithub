@@ -2,31 +2,29 @@ package com.musichub.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.musichub.dao.ProductDAOImpl;
 import com.musichub.model.Product;
 
 
-//@Service("serv")
+@Service("serv")
 public class ProductService {
-
-	ProductDAOImpl products;
-	public ProductService()
+	@Autowired
+	ProductDAOImpl data;
+	
+    ProductService()
 	{
-		 products=new ProductDAOImpl();
-		
-		
+		data=new ProductDAOImpl();
 	}
-		
-	public boolean mapRow(int i,String h,String j,String k,String l)
+	public boolean mapRow(String name,String brand,String description,double price,String category)
 	{
-    products.addProduct(i,h,j,k,l);
+    data.addProduct(name,brand,description,price,category);
     return true;
 	}
 	
     public List<Product> getAllProducts() {
-    	return products.getAllProduct();
+    	return data.getAllProduct();
 		
 	}
 	
